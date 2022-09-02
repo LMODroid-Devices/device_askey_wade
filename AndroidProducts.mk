@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_wade.mk
+    $(LOCAL_DIR)/lmodroid_wade.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_wade-eng \
-    lineage_wade-user \
-    lineage_wade-userdebug
+    lmodroid_wade-eng \
+    lmodroid_wade-user \
+    lmodroid_wade-userdebug
