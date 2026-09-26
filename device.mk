@@ -5,7 +5,7 @@
 
 ## Bluetooth
 PRODUCT_PACKAGES += \
-    WadeBluetoothOverlay \
+    BluetoothOverlayTarget \
     libbt-vendor
 
 $(call soong_config_set,brcm_libbt,bdroid_buildcfg_include_dir,$(LOCAL_PATH)/bluetooth/include)
@@ -19,10 +19,10 @@ ifeq ($(WITH_GMS),true)
 GMS_MAKEFILE=gms_minimal.mk
 endif
 
-## Init-Files
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init-files/init.amlogic.wifi_buildin.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.wifi_buildin.rc \
-    $(LOCAL_PATH)/init-files/init.amlogic.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.target.rc \
+## Init
+PRODUCT_PACKAGES += \
+    init.amlogic.target.rc \
+    init.amlogic.wifi_buildin.rc
 
 ## IR
 PRODUCT_PACKAGES += \
